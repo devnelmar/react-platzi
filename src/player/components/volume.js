@@ -8,8 +8,8 @@ function Volume(props){
         className="Volume"
         >
             <VolumenIcon
-                color:'white'
-                size:{25}
+                color='white'
+                size={25}
             />
             <div
             className="Volume-range"
@@ -17,12 +17,13 @@ function Volume(props){
                 <input
                     type="range"
                     min={0}
-                    max={100}
+                    max={1}
+                    step={.05}
+                    onChange={props.handleVolumeChange}
                 />
             </div>
-
         </button>
     )
-};
+}
 
 export default Volume;
